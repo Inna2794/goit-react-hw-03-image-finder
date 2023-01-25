@@ -6,8 +6,7 @@ const ImageGalleryItem = props => {
   const { largeImageURL, previewURL, tags } = props.picture;
 
   const handleImgClick = evt => {
-    console.log('object', largeImageURL);
-    props.onClick(largeImageURL);
+     props.onClick(largeImageURL);
   };
 
   return (
