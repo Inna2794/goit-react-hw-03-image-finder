@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 
 import '../ImageGalleryItem/ImageGalleryItem.css';
 
-const ImageGalleryItem = ({ largeImageURL, previewURL, tags, onClick }) => {
-
-
+const ImageGalleryItem = ({
+  picture: { largeImageURL, previewURL, tags },
+  onClick,
+}) => {
   const handleImgClick = evt => {
-   onClick(largeImageURL);
+    onClick(largeImageURL);
   };
 
   return (
@@ -26,10 +27,10 @@ const ImageGalleryItem = ({ largeImageURL, previewURL, tags, onClick }) => {
 export default ImageGalleryItem;
 
 ImageGalleryItem.propTypes = {
-
+  picture: PropTypes.shape({
     largeImageURL: PropTypes.string.isRequired,
     previewURL: PropTypes.string.isRequired,
     tags: PropTypes.string.isRequired,
-
+  }).isRequired,
   onClick: PropTypes.func.isRequired,
 };

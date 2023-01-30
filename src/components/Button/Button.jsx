@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { LoadMoreButton } from './Button.styled';
 
-const Button = ({page, onClick}) => {
+const Button = ({ page, onClick }) => {
   let pageNumber = page;
   const handleClick = evt => {
     console.log(evt);
@@ -19,6 +19,6 @@ const Button = ({page, onClick}) => {
 export default Button;
 
 Button.propTypes = {
-    page: PropTypes.number.isRequired,
-    onClick: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
